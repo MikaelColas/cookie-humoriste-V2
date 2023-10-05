@@ -26,16 +26,17 @@ function getRandomId(ids) {
   return randomIndex;
   }
   
-  // Sélectionner la 
+// Sélectionner la catégorie de blague
+function getCategorie(){
+  const categories = document.getElementById('choixMenu'); // Accédez à l'élément <select>
+  const selectedValue = categories.value; // Récupérez la valeur de l'option sélectionnée
+  return selectedValue;
+}
+
+// Prendre une blague au hasard dans la catégorie
 function filterJoke(joke, categorie){
   const result = joke.filter(joke => joke.type === categorie)
   return result;
-}
-
-function getCategorie(){
-  const selectElement = document.getElementById('choixMenu'); // Accédez à l'élément <select>
-  const selectedValue = selectElement.value; // Récupérez la valeur de l'option sélectionnée
-  return selectedValue;
 }
 
 // Obtenir une blague du JSON
@@ -60,6 +61,5 @@ async function getJoke() {
 }
 
 
-// Appuyer sur le bouton pour charger une blague
-
+// Appuyer sur le bouton pour charger une blague (run)
 button.addEventListener('click', getJoke)===true;
