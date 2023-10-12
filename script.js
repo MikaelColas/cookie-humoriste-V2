@@ -11,9 +11,9 @@ function blague(debut, fin) {
     VoiceRSS.speech({
         key: '8636fe5001004cfaada3ebe14ea51222',
         src: `${debut} ... ${fin}`,
-        hl: 'fr-ca',
+        hl: 'fr-fr',
         v: 'Logan',
-        r: 5, 
+        r: 1, 
         c: 'mp3',
         f: '44khz_16bit_stereo',
         ssml: false
